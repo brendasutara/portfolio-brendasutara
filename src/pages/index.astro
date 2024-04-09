@@ -7,6 +7,8 @@ import SocialPill from "../components/SocialPill.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
 import BagIcon from "../components/icons/bag.astro";
+import PresentationIcon from "../components/icons/presentation.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -34,7 +36,7 @@ import BagIcon from "../components/icons/bag.astro";
         Hola, soy Brenda
       </h1>
       <h2 class="text-xl text-wrap">
-        <span class="text-yellow-200"
+        <span class="text-pink-400"
           >Desarrolladora Frontend orientada al diseño UX/UI</span
         > de Mendoza, Argentina. Mi pasión está en transformar ideas en experiencias
         digitales cautivadoras 💻✨. Con una base en arquitectura y un entusiasmo
@@ -57,6 +59,15 @@ import BagIcon from "../components/icons/bag.astro";
         </SocialPill> -->
       </div>
     </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
+        <PresentationIcon class="size-4 md:size-8 opacity-60 items-center" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
     <SectionContainer id="experiencia">
       <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
         <BagIcon class="size-4 md:size-8 opacity-60 items-center" />
