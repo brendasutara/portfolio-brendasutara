@@ -3,19 +3,21 @@ import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/linkedin.astro";
 import GitHubIcon from "../components/icons/github.astro";
-import EmailIcon from "../components/icons/email.astro";
 import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import BagIcon from "../components/icons/bag.astro";
 ---
 
 <Layout
-  title="Portfolio Brenda Sutara - Frontend Developer orientada al Design UX/UI"
-  description="Contrata a Brenda para realizar tus proyectos"
+  title="Portfolio Brenda Sutara - Desarrolladora Frontend orientada al Design UX/UI"
+  description="¡Bienvenido a mi portfolio! Soy Brenda Sutara, una apasionada desarrolladora Frontend con experiencia en la creación de interfaces web cautivadoras y funcionales. Explora mis proyectos para descubrir mi habilidad para equilibrar la creatividad con la usabilidad, y cómo transformo ideas en experiencias digitales memorables. ¡Contáctame para colaborar en tu próximo proyecto!"
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer>
       <div class="flex justify-start gap-x-4">
         <img
-          class="rounded-full w-20 h-20"
+          class="rounded-full size-20"
           src="https://github.com/brendasutara.png"
           alt="Brenda Sutara foto de perfil"
         />
@@ -34,14 +36,13 @@ import SocialPill from "../components/SocialPill.astro";
       <h2 class="text-xl text-wrap">
         <span class="text-yellow-200"
           >Desarrolladora Frontend orientada al diseño UX/UI</span
-        > de Mendoza, <span class="text-blue-300">Argentina</span>. Mi pasión
-        está en transformar ideas en experiencias digitales cautivadoras 💻✨.
-        Con una base en arquitectura y un entusiasmo recién descubierto por el
-        desarrollo frontend, me aventuro a crear soluciones web que combinen
-        funcionalidad y diseño.
+        > de Mendoza, Argentina. Mi pasión está en transformar ideas en experiencias
+        digitales cautivadoras 💻✨. Con una base en arquitectura y un entusiasmo
+        recién descubierto por el desarrollo frontend, me aventuro a crear soluciones
+        web que combinen funcionalidad y diseño.
       </h2>
 
-      <div class="flex gap-x-2 py-2">
+      <div class="flex gap-x-2 py-4">
         <SocialPill href="https://github.com/brendasutara">
           <GitHubIcon class="size-4 md:size-6" />
           GitHub
@@ -55,6 +56,13 @@ import SocialPill from "../components/SocialPill.astro";
           sutarabrenda@gmail.com
         </SocialPill> -->
       </div>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
+        <BagIcon class="size-4 md:size-8 opacity-60 items-center" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
