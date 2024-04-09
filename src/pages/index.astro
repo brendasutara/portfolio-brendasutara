@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/linkedin.astro";
+import GitHubIcon from "../components/icons/github.astro";
+import EmailIcon from "../components/icons/email.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<Layout
+  title="Portfolio Brenda Sutara - Frontend Developer orientada al Design UX/UI"
+  description="Contrata a Brenda para realizar tus proyectos"
+>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <div class="flex justify-start gap-x-4">
+        <img
+          class="rounded-full w-20 h-20"
+          src="https://github.com/brendasutara.png"
+          alt="Brenda Sutara foto de perfil"
+        />
+        <a
+          href="https://linkedin.com/in/brendasutara/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </div>
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 py-4">
+        Hola, soy Brenda
+      </h1>
+      <h2 class="text-xl text-wrap">
+        <span class="text-yellow-200"
+          >Desarrolladora Frontend orientada al diseño UX/UI</span
+        > de Mendoza, <span class="text-blue-300">Argentina</span>. Mi pasión
+        está en transformar ideas en experiencias digitales cautivadoras 💻✨.
+        Con una base en arquitectura y un entusiasmo recién descubierto por el
+        desarrollo frontend, me aventuro a crear soluciones web que combinen
+        funcionalidad y diseño.
+      </h2>
+
+      <div class="flex gap-x-2 py-2">
+        <SocialPill href="https://github.com/brendasutara">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://linkedin.com/in/brendasutara">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <!-- <SocialPill href="https://linkedin.com/in/brendasutara">
+          <EmailIcon class="size-4 md:size-6" />
+          sutarabrenda@gmail.com
+        </SocialPill> -->
+      </div>
+    </section>
+  </main>
+</Layout>
