@@ -29,7 +29,7 @@ const { title, description } = Astro.props;
       <Footer />
     </SectionContainer>
     <div
-      class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
   </body>
@@ -48,6 +48,6 @@ const { title, description } = Astro.props;
     background: #0a0a0a;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
   }
 </style>

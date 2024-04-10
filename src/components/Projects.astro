@@ -1,39 +1,68 @@
-<div class="max-w-sm border rounded-lg shadow bg-gray-800 border-gray-700">
-  <a href="#">
-    <img class="rounded-t-lg" src="../../public/clone-trello.webp" alt="" />
-  </a>
-  <div class="p-5">
-    <a href="#">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-        Clon de Trello
-      </h5>
-    </a>
-    <p class="mb-3 font-normal text-gray-400">
-      Este proyecto es un clon de Trello desarrollado en Angular con CDK Angular
-      y estilizado con Tailwind CSS. Ofrece una experiencia similar a la de
-      Trello, con funcionalidades de arrastrar y soltar, manejo de listas y
-      tablas, además de mejoras en rendimiento y experiencia de usuario. Visita
-      la demo en Vercel para verlo en acción.
-    </p>
-    <a
-      href="#"
-      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-    >
-      Read more
-      <svg
-        class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 14 10"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-      </svg>
-    </a>
-  </div>
-</div>
+---
+import SocialPill from "./SocialPill.astro";
+import LinkedInIcon from "../components/icons/linkedin.astro";
+import GitHubIcon from "../components/icons/github.astro";
+
+const PROJECTS = [
+  {
+    title: "Trello Clone",
+    description:
+      "Este proyecto es un clon de Trello desarrollado en Angular con CDK Angular y estilizado con Tailwind CSS. Ofrece una experiencia similar a la de Trello, con funcionalidades de arrastrar y soltar, manejo de listas y tablas, además de mejoras en rendimiento y experiencia de usuario. Visita la demo en Vercel para verlo en acción.",
+    link: "https://trello-clone-pi-eight.vercel.app/app/boards",
+    github: "https://github.com/brendasutara/trello-clone",
+    image: "./public/clon-trello.webp",
+    tags: ["Angular", "Tailwind CSS"],
+  },
+  {
+    title: "Tienda Online con React.js",
+    description:
+      "Tienda Online con React.js, Vite.js para el desarrollo, TailwindCSS para estilos y React Router DOM para la navegación. Integración con Platzi Fake Store API para datos de productos. Filtrado, detalles de productos, carrito de compras, checkout y historial de compras",
+    link: "https://shoppiecommerce.netlify.app/",
+    github: "https://github.com/brendasutara/e-commerce-react",
+    image: "./public/e-commerce-react.webp",
+    tags: ["React", "Vite", "Tailwind CSS"],
+  },
+  {
+    title: "To Do App",
+    description:
+      "Esta aplicación permite a los usuarios gestionar sus tareas diarias de manera eficiente. Puedes agregar, marcar como completadas y eliminar tareas de tu lista.",
+    link: "https://brendasutara.github.io/react-app/",
+    github: "https://github.com/brendasutara/react-app",
+    image: "./public/todo-app.webp",
+    tags: ["React", "CSS"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, link, github, tags }) => (
+    <article class="pb-10">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-400 dark:text-white">
+        {title}
+      </h3>
+      <p class="mb-4 text-md font-medium text-white text-pretty dark:text-gray-400">
+        {description}
+      </p>
+      <div class="flex gap-x-4 mb-6">
+        <SocialPill href={github}>
+          <GitHubIcon class="size-4 md:size-6" />
+          Repositorio
+        </SocialPill>
+        <SocialPill href={link}>
+          <LinkedInIcon class="size-4 md:size-6" />
+          Ir al proyecto
+        </SocialPill>
+      </div>
+      <img
+        class="rounded-lg mb-4"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+      <ul class="flex mb-4 gap-x-3 text-sm font-medium leading-none text-gray-400 dark:text-gray-500">
+        {tags.map((tag) => (
+          <li>+ {tag}</li>
+        ))}
+      </ul>
+    </article>
+  ))
+}
