@@ -41,7 +41,7 @@ const { title, description } = Astro.props;
 
   html {
     font-family: "Onest variable", system-ui, sans-serif;
-    overscroll-behavior: none;
+    overscroll-behavior: smooth;
   }
 
   body {
@@ -49,5 +49,18 @@ const { title, description } = Astro.props;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    overscroll-behavior: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: rgba(255, 255, 255, 0.9);
+    }
   }
 </style>
