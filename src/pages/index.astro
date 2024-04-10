@@ -7,8 +7,10 @@ import SocialPill from "../components/SocialPill.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
 import BagIcon from "../components/icons/bag.astro";
+import UserMeIcon from "../components/icons/userMe.astro";
 import PresentationIcon from "../components/icons/presentation.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout
@@ -53,10 +55,6 @@ import Projects from "../components/Projects.astro";
           <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
-        <!-- <SocialPill href="https://linkedin.com/in/brendasutara">
-          <EmailIcon class="size-4 md:size-6" />
-          sutarabrenda@gmail.com
-        </SocialPill> -->
       </div>
     </SectionContainer>
 
@@ -74,6 +72,14 @@ import Projects from "../components/Projects.astro";
         Experiencia Laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
+        <UserMeIcon class="size-4 md:size-8 opacity-60 items-center" />
+        Un poco sobre mi
+      </h2>
+      <About />
     </SectionContainer>
   </main>
 </Layout>
