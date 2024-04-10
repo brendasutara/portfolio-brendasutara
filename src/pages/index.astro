@@ -34,10 +34,12 @@ import About from "../components/About.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </div>
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 py-4">
+      <h1
+        class="text-white text-4xl md:text-5xl font-bold flex flex-row gap-x-4 py-4"
+      >
         Hola, soy Brenda
       </h1>
-      <h2 class="text-xl text-wrap">
+      <h2 class="text-lg md:text-xl text-wrap">
         <span class="text-pink-400"
           >Desarrolladora Frontend orientada al diseño UX/UI</span
         > de Mendoza, Argentina. Mi pasión está en transformar ideas en experiencias
@@ -48,38 +50,47 @@ import About from "../components/About.astro";
 
       <div class="flex gap-x-2 py-4">
         <SocialPill href="https://github.com/brendasutara">
-          <GitHubIcon class="size-4 md:size-6" />
+          <GitHubIcon class="size-6" />
           GitHub
         </SocialPill>
         <SocialPill href="https://linkedin.com/in/brendasutara">
-          <LinkedInIcon class="size-4 md:size-6" />
+          <LinkedInIcon class="size-6" />
           LinkedIn
         </SocialPill>
       </div>
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
+    <section
+      id="experiencia"
+      class="rounded-lg shadow-gray-400/50 w-11/12 lg:w-[740px] mx-auto mt-20 lg:mt-44"
+    >
       <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
-        <PresentationIcon class="size-4 md:size-8 opacity-60 items-center" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
-
-    <SectionContainer id="experiencia">
-      <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
-        <BagIcon class="size-4 md:size-8 opacity-60 items-center" />
+        <BagIcon class="size-8 opacity-60 items-center" />
         Experiencia Laboral
       </h2>
       <Experience />
-    </SectionContainer>
+    </section>
 
-    <SectionContainer id="sobre-mi">
+    <section
+      id="proyectos"
+      class="rounded-lg shadow-gray-400/50 w-11/12 lg:w-[740px] mx-auto mt-20 lg:mt-44"
+    >
       <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
-        <UserMeIcon class="size-4 md:size-8 opacity-60 items-center" />
+        <PresentationIcon class="size-8 opacity-60 items-center" />
+        Proyectos
+      </h2>
+      <Projects />
+    </section>
+
+    <section
+      id="sobre-mi"
+      class="rounded-lg shadow-gray-400/50 w-11/12 lg:w-[740px] mx-auto mt-20 lg:mt-44"
+    >
+      <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
+        <UserMeIcon class="size-8 opacity-60 items-center" />
         Un poco sobre mi
       </h2>
       <About />
-    </SectionContainer>
+    </section>
   </main>
 </Layout>
