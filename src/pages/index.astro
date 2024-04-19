@@ -12,6 +12,8 @@ import PresentationIcon from "../components/icons/presentation.astro";
 import Projects from "../components/Projects.astro";
 import About from "../components/About.astro";
 import EmailIcon from "../components/icons/email.astro";
+import AppWindowsIcon from "../components/icons/appwindows.astro";
+import ProjectsWordpress from "../components/ProjectsWordpress.astro";
 ---
 
 <Layout
@@ -84,9 +86,15 @@ import EmailIcon from "../components/icons/email.astro";
     >
       <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
         <PresentationIcon class="size-8 opacity-60 items-center" />
-        Proyectos
+        Proyectos Frontend
       </h2>
       <Projects />
+
+      <h2 class="flex text-2xl font-semibold gap-x-4 mb-6">
+        <AppWindowsIcon class="size-8 opacity-60 items-center" />
+        Proyectos Wordpress
+      </h2>
+      <ProjectsWordpress />
     </section>
 
     <section

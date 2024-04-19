@@ -1,0 +1,84 @@
+---
+import SocialPill from "./SocialPill.astro";
+import LinkedInIcon from "../components/icons/linkedin.astro";
+
+const PROJECTSWORDPRESS = [
+  {
+    title: "Desquiciado",
+    description:
+      "Desarrollé este sitio web para una prestigiosa bodega ubicada en Mendoza, Argentina. La empresa se enfrentaba a la problemática de una página web inaccesible, lo que obstaculizaba su comunicación con los clientes y afectaba su presencia en línea. Ante la urgencia de la situación, se requirió una solución inmediata. Respondiendo ágilmente a la necesidad del cliente, llevé a cabo la reconstrucción integral del sitio en un tiempo récord, utilizando WordPress como plataforma principal y aprovechando las capacidades de Elementor para un diseño fluido y atractivo",
+    link: "https://desquiciado.com/",
+    image: "https://i.imgur.com/iPMehf2.jpeg",
+    tags: ["Wordpress", "Elementor"],
+  },
+  {
+    title: "Archibrenda",
+    description:
+      "Archibrenda es mi proyecto personal, una plataforma de educación en línea que ofrece cursos digitales a personas de toda Latinoamérica. Destacando por su versatilidad, cuenta con un blog integrado que proporciona contenido educativo adicional y un e-commerce robusto, implementado con WooCommerce, que facilita la compra y gestión de cursos. Una de las características más destacadas de Archibrenda es su integración con LearnDash, que permite a los alumnos acceder a los cursos directamente desde la misma plataforma. Esta integración garantiza una experiencia de aprendizaje fluida y completa para los usuarios.",
+    link: "https://archibrenda.com/",
+    image: "https://i.imgur.com/VNQESDm.jpeg",
+    tags: ["Wordpress", "Elementor", "Woocommerce", "Learndash"],
+  },
+  {
+    title: "Mannix & Co",
+    description:
+      "Desarrollé este sitio web para un bufete de abogados especializados en extranjería, con el desafío principal de hacerlo multilingüe. Implementé con éxito esta funcionalidad utilizando un plugin especializado, lo que permitió la creación de 10 páginas en diferentes idiomas, asegurando así una experiencia óptima para usuarios de diversos países y culturas.Utilicé Elementor Pro para diseñar y estructurar las páginas, garantizando una presentación profesional y una navegación intuitiva. Además, implementé buenas prácticas de desarrollo, como la realización regular de backups, para mantener la seguridad y estabilidad del sitio a lo largo del tiempo.",
+    link: "https://legalcounselmannix.com/es/inicio/",
+    image: "https://i.imgur.com/gnRYemX.jpeg",
+    tags: ["Worpress", "Elementor"],
+  },
+  {
+    title: "Mercuri",
+    description:
+      "Desarrollé esta página web para un emprendimiento dedicado a la venta de insumos para la elaboración de cosméticos caseros. El diseño previamente establecido se implementó en WordPress, creando un e-commerce funcional y atractivo con WooCommerce como plataforma de comercio electrónico. Actualmente, el proyecto sigue en desarrollo y mantenimiento continuo para asegurar su funcionamiento óptimo y adaptarse a las necesidades cambiantes del mercado y del cliente. Este enfoque en el mantenimiento y mejora constante demuestra mi compromiso con la calidad y la excelencia en el desarrollo de proyectos de WordPress.",
+    link: "https://universomercuri.com/",
+    image: "https://i.imgur.com/HX0AlbI.jpeg",
+    tags: ["Wordpress", "Elementor", "Woocommerce"],
+  },
+  //   {
+  //     title: "Yeggo",
+  //     description:
+  //       "Esta aplicación permite a los usuarios gestionar sus tareas diarias de manera eficiente. Puedes agregar, marcar como completadas y eliminar tareas de tu lista.",
+  //     link: "https://yeggo.com.ar/",
+  //     image: "https://i.imgur.com/y6q2Y3x.jpeg",
+  //     tags: ["React", "CSS"],
+  //   },
+  {
+    title: "Un mundo idiomas",
+    description:
+      "Un Mundo Idiomas es una plataforma que actúa como intermediario entre profesores y alumnos interesados en aprender idiomas. Este proyecto presenta una complejidad única debido a la gestión de un sistema de cupones limitados por alumno.Implementé con éxito esta funcionalidad utilizando un plugin personalizado, que permitió la asignación y seguimiento eficiente de los cupones. Además, integré la posibilidad de adquirir clases a través de WooCommerce y la realización de cursos utilizando LearnDash, lo que proporciona una experiencia completa de aprendizaje en línea.",
+    link: "https://unmundoidiomas.com/",
+    image: "https://i.imgur.com/Po7UV8T.jpeg",
+    tags: ["Wordpress", "Elementor", "Woocommerce", "Learndash"],
+  },
+];
+---
+
+{
+  PROJECTSWORDPRESS.map(({ title, description, image, link, tags }) => (
+    <article class="pb-10">
+      <h3 class="text-2xl font-semibold mb-4 text-pink-400 dark:text-white">
+        {title}
+      </h3>
+      <p class="mb-4 text-md font-medium text-white text-pretty dark:text-gray-400">
+        {description}
+      </p>
+      <div class="flex gap-x-4 mb-6">
+        <SocialPill href={link}>
+          <LinkedInIcon class="size-4 md:size-6" />
+          Ir al proyecto
+        </SocialPill>
+      </div>
+      <img
+        class="rounded-lg mb-4"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+      <ul class="flex mb-4 gap-x-3 text-sm font-medium leading-none text-gray-400 dark:text-gray-500">
+        {tags.map((tag) => (
+          <li>+ {tag}</li>
+        ))}
+      </ul>
+    </article>
+  ))
+}
